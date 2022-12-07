@@ -4,19 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebonie Tech</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kenia&family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">      
-        <div class="container">
-        <a href="index.html"><img src="images/linkedin_banner_image_1.png" alt="my-logo" class="logo"></a>
+        <div>
+            <a href="index.html"><span class="logo-text">EbonieTech</span></a>
+        </div>
+        <div>
          <a class="active" href="index.html"><span>Home</span></a>
          <a href="Our-Services.Html"><span>Our Services</span></a>
          <a href="about.Html"><span>About</span></a>
          <a href="contact-us.HTml"><span>Contact Us</span></a>
-         <a href="search.Html"><span>search</span></a>
-        </div>      
+         <form id="form" role="search">
+         <input type="search" id="query" name="q" placeholder="Search..."
+         aria-label="Search through the site content">
+         <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button> 
+        </form>
+        </div>
+         
     </nav> 
      <div class="content">
         
