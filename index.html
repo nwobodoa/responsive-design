@@ -6,8 +6,13 @@
     <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="css/global1.css">
     <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kenia&family=Montserrat:wght@400;700&family=Source+Code+Pro:wght@700;800;900&display=swap" rel="stylesheet">
    <script src="script/hamburger.js" defer></script>
+   <script src="script/carousel.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -17,7 +22,10 @@
         <div class="icon-3" id="c"></div>
         <div class="clear"></div>
       </div>
-    <nav id="navbar">     
+    <nav id="navbar">  
+        <div>
+            <a href="index.html"><img src="images/logo.png" alt="my-logo" class="logo"></a>
+        </div>   
         <ul>
             <li><a class="active" href="index.html"><span>Home</span></a></li>
             <li><a href="Our-Services.html"><span>Services</span></a></li>
@@ -45,6 +53,19 @@
     </nav> 
     <div class="dark-blue" id="blue"></div>
 </header>
+<div class="carousel-wrapper">
+    <div class="carousel">
+
+        <img class="carousel__photo initial" src="images/pexels-anna-shvets-3727459.jpg">
+        <img class="carousel__photo" src="images/pexels-canva-studio-3153198.jpg">
+        <img class="carousel__photo" src="images/pexels-christina-morillo-1181615.jpg">
+        <img class="carousel__photo" src="images/pexels-christina-morillo-1181615.jpg">
+      
+      <div class="carousel__button--next"></div>
+      <div class="carousel__button--prev"></div>
+
+    </div>
+  </div>
      <div class="content">
         
         <h4>TECH SOLUTION AT IT'S FINEST</h4>
