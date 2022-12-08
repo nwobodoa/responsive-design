@@ -22,7 +22,9 @@
     article > div {
         width: 50%;
     }
-   
+    .feat{background-color: blueviolet;
+    color: azure
+    }
     
   
   }

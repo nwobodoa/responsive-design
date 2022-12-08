@@ -1,249 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+/* 
+RESET RULES
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+} */
 
-  #contact {
-    width: 100%;
-    height: 100%;
+
+
+a {
+  color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+}
+
+
+select::-ms-expand {
+  display: none;
+}
+
+
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+
+.my-form h1 {
+  margin-bottom: 1.5rem;
+}
+
+.my-form li,
+.my-form .grid > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+  height: 170px;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+   opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:enabled:hover,
+.my-form button:focus,
+.my-form input[type="checkbox"]:focus + label {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+
+.my-form *:required {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg);  
+}
+
+.my-form select {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/down.svg);
+}
+
+.my-form *:disabled {
+  cursor: default;
+  filter: blur(2px);
+}
+
+
+/* FORM BTNS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.my-form .required-msg {
+  display: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
+    no-repeat center left / 15px 15px;
+  padding-left: 20px;
+}
+
+.my-form .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.my-form button {
+  font-weight: bold;
+}
+
+.my-form button > * {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+  transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+  transform: translateX(110%);
+}
+
+
+
+.my-form input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.my-form input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form input[type="checkbox"] + label::before,
+.my-form input[type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+}
+
+.my-form input[type="checkbox"] + label::before {
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--white);
+}
+
+.my-form input[type="checkbox"]:checked + label::before {
+  background: var(--red);
+}
+
+.my-form input[type="checkbox"]:checked + label::after {
+  left: 7px;
+  top: 7px;
+  width: 6px;
+  height: 14px;
+  border-bottom: 2px solid var(--white);
+  border-right: 2px solid var(--white);
+  transform: rotate(45deg);
+}
+
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 600px) {
+  .my-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
   }
-  
-  .section-header {
-    text-align: center;
-    margin: 0 auto;
-    padding: 40px 0;
-    font: 300 60px 'Oswald', sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 6px;
+
+  .my-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .contact-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative;
-    max-width: 840px;
+
+  .my-form .grid-3 {
+    grid-template-columns: auto auto auto;
+    align-items: center;
   }
-  
-  /* Left contact page */
-  .form-horizontal {
-    /*float: left;*/
-    max-width: 400px;
-    font-family: 'Lato';
-    font-weight: 400;
+
+  .my-form .grid > *:not(:last-child) {
+    margin-bottom: 0;
   }
-  
-  .form-control, 
-  textarea {
-    max-width: 400px;
-    background-color: #000;
-    color: #fff;
-    letter-spacing: 1px;
-  }
-  
-  .send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    overflow: hidden;
-    transition: all .2s ease-in-out;
-  }
-  
-  .alt-send-button {
-    width: 400px;
-    height: 34px;
-    transition: all .2s ease-in-out;
-  }
-  
-  .send-text {
+
+  .my-form .required-msg {
     display: block;
-    margin-top: 10px;
-    font: 700 12px 'Lato', sans-serif;
-    letter-spacing: 2px;
   }
-  
-  .alt-send-button:hover {
-    transform: translate3d(0px, -29px, 0px);
+}
+
+@media screen and (min-width: 541px) {
+  .my-form input[type="checkbox"] + label::before {
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
-  /* Begin Right Contact Page */
-  .direct-contact-container {
-    max-width: 400px;
+
+  .my-form input[type="checkbox"]:checked + label::after {
+    top: 3px;
   }
-  
-  /* Location, Phone, Email Section */
-  .contact-list {
-    list-style-type: none;
-    margin-left: -30px;
-    padding-right: 20px;
-  }
-  
-  .list-item {
-    line-height: 4;
-    color: #aaa;
-  }
-  
-  .contact-text {
-    font: 300 18px 'Lato', sans-serif;
-    letter-spacing: 1.9px;
-    color: #bbb;
-  }
-  
-  .place {
-    margin-left: 62px;
-  }
-  
-  .phone {
-    margin-left: 56px;
-  }
-  
-  .gmail {
-    margin-left: 53px;
-  }
-  
-  .contact-text a {
-    color: #bbb;
-    text-decoration: none;
-    transition-duration: 0.2s;
-  }
-  
-  .contact-text a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  .social-media-list li a {
-    color: #fff;
-  }
-  
-  .social-media-list li {
-    position: relative; 
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgb(27,27,27);
-    cursor: pointer; 
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
-  }
-  
-  .social-media-list li:hover {
-    background-color: #fff; 
-  }
-  
-  .social-media-list li:hover:after {
-    opacity: 1;  
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-  }
-  
-  .social-media-list li:hover a {
-    color: #000;
-  }
-  
-  .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: #555;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
-  hr {
-    border-color: rgba(255,255,255,.6);
-  }
-  
-  /* Begin Media Queries*/
-  @media screen and (max-width: 850px) {
-    .contact-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-    .direct-contact-container, .form-horizontal {
-      margin: 0 auto;
-    }  
-    
-    .direct-contact-container {
-      margin-top: 60px;
-      max-width: 300px;
-    }    
-    .social-media-list li {
-      height: 60px;
-      width: 60px;
-      line-height: 60px;
-    }
-    .social-media-list li:after {
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-    }
-  }
-  
-  @media screen and (max-width: 569px) {
-  
-    .direct-contact-container, .form-wrapper {
-      float: none;
-      margin: 0 auto;
-    }  
-    .form-control, textarea {
-      
-      margin: 0 auto;
-    }
-   
-    
-    .name, .email, textarea {
-      width: 280px;
-    } 
-    
-    .direct-contact-container {
-      margin-top: 60px;
-      max-width: 280px;
-    }  
-    .social-media-list {
-      left: 0;
-    }
-    .social-media-list li {
-      height: 55px;
-      width: 55px;
-      line-height: 55px;
-      font-size: 2rem;
-    }
-    .social-media-list li:after {
-      width: 55px;
-      height: 55px;
-      line-height: 55px;
-    }
-    
-  }
-  
-  @media screen and (max-width: 410px) {
-    .send-button {
-      width: 99%;
-    }
-  }
+}
+.contact > p{
+    display: flex;
+    flex-direction: column;
+color: rgb(91, 91, 219);
+
+}
+

@@ -1,5 +1,6 @@
 
 
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
   font-family: "montserrat", roboto;
@@ -98,11 +99,12 @@ nav {
 
 nav ul li {
   list-style: none;
-  font-size: 24px;
+  font-size: 15px;
   color: #A29FE1;
   line-height: 2.2;
   text-transform: uppercase;
   letter-spacing: 1.7px;
+  
 }
 
 nav ul li a {
@@ -263,7 +265,7 @@ a:hover{
   justify-content: center;
   flex-direction: column;
   background:#e9e9f8;
-  height: 40%;
+  height: 20%;
 }
 
 footer{
@@ -305,10 +307,7 @@ footer div a {
   flex-direction: row;
 }
 
-.page-divider {
-  min-height: 30%;
 
-}
 .search-bar{
   display: flex;
   gap: 5px;

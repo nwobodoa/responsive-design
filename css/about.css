@@ -1,6 +1,6 @@
 h1 {
     width: 100%;
-    text-align: center;
+    
 }
 
 .clients {
@@ -13,6 +13,7 @@ h1 {
     grid-area: title;
     text-align: center;
     width: 100%;
+    font-size: inherit;
 }
 
 .clients-col-1 {
