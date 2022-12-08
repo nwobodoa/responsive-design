@@ -1,11 +1,28 @@
 
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
   font-family: "montserrat", roboto;
-  max-width: 100vw;
+  max-width: 1050px;
   overflow-x: hidden;
-  padding: 20px;
+  margin: auto;
+ 
 }
+
+.btn-search{
+  float: left;
+  padding: 10px;
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+.svg-search {  
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+} 
 
 header {
   width: 100%;
@@ -35,7 +52,7 @@ header {
   position: absolute;
   height: 60px;
   width: 60px;
-  top: 10%;
+  top: 5%;
   left: 3%;
   z-index: 1000;
   cursor: pointer;
@@ -126,18 +143,48 @@ nav ul li a {
   }
 }
 
-nav > ul > li > a:hover{
+a:hover{
   color: #8682d8;
 }
 
 @media only screen and (max-width:769px){
+  body {
+    background: #A29FE1;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ footer  .right{
+    display: none;
+  }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer div a {
+    text-decoration: none;
+    list-style: none;
+     font-size: 0.9rem;
+     color: black;
+     line-height: 2.2;
+   }
+
+   .socials {
+    display: flex;
+    flex-direction: row;
+   }
+  
+  .search-bar{
+    display: none;
+  }
   .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 15%;
   }
   .content h1 {
     font-size: 70px;
@@ -147,9 +194,6 @@ nav > ul > li > a:hover{
   
   header {
     width: 100%;
-    height: 100%;
-    background: #A29FE1;
-    position: absolute;
     overflow: auto;
   }
   nav ul {
@@ -177,6 +221,12 @@ nav > ul > li > a:hover{
     width: 60%;
     opacity: 1;
   }
+  .footer-logo {
+    display: none;
+  }
+  footer {
+    background-color: #ffff;
+  }
   
 }
 
@@ -192,6 +242,8 @@ nav > ul > li > a:hover{
   height: fit-content;
   opacity: 1;
   align-items: center;
+  border-bottom: 2px solid  #e9e9f8;
+  margin-bottom: 20px;
  }
  nav ul {
   display: flex;
@@ -199,9 +251,88 @@ nav > ul > li > a:hover{
 
 
  }
- .logo {
+ .logo{
   height: 50px;
   width: auto;
 }
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background:#e9e9f8;
+  height: 40%;
+}
+
+footer{
+  display: flex;
+  gap: 30px;;
+  background:#e9e9f8;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+
+
+  
+  
+}
+
+footer div {
+  display : flex;
+  flex-direction: column;
+  width: 50%;
+}
+footer div a {
+ text-decoration: none;
+ list-style: none;
+  font-size: 10px;
+  color: black;
+  line-height: 2.2;
+  
+ 
+}
+
+.footer-logo {
+  width: 30%;
+  height: auto;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-divider {
+  min-height: 30%;
+
+}
+.search-bar{
+  display: flex;
+  gap: 5px;
+}
+}
+
+@media only screen and (max-width:769px){
+  .pic{
+      display: none;
+  }
+  body {
+      padding-top: 10%
+  }
+  main {
+      margin-top: 10%;
+      padding: 20px;
+  }
+ 
+}
+
+@media only screen and (min-width:769px){
+  .pic {
+      max-width: 100%;
+      height: auto;
+  }
 
 }

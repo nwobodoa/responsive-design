@@ -1,0 +1,34 @@
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.clients {
+    display: grid;
+    grid-template-areas: "title title title"
+        "col1 col2 col3";
+}
+
+.clients-h3 {
+    grid-area: title;
+    text-align: center;
+    width: 100%;
+}
+
+.clients-col-1 {
+    grid-area: col1;
+}
+
+.clients-col-2 {
+    grid-area: col2;
+}
+
+.clients-col-3 {
+    grid-area: col3;
+}
+
+
+.clients>div {
+    display: flex;
+    flex-direction: column;
+}
